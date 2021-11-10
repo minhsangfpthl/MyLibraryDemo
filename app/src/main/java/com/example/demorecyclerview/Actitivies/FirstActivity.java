@@ -1,4 +1,4 @@
-package com.example.demorecyclerview;
+package com.example.demorecyclerview.Actitivies;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,6 +6,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+
+import com.example.demorecyclerview.R;
 
 public class FirstActivity extends AppCompatActivity {
     Button btn_first;

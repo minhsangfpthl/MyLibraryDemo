@@ -10,16 +10,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Design.Light.NoActionBar">
         <activity
-            android:name=".BookActivity"
+            android:name=".Actitivies.BookActivity"
             android:exported="true" />
         <activity
-            android:name=".FirstActivity"
+            android:name=".Actitivies.FirstActivity"
             android:exported="true" />
         <activity
-            android:name=".InforActivity"
+            android:name=".Actitivies.InforActivity"
             android:exported="true" />
         <activity
-            android:name=".AllBookActivity"
+            android:name=".Actitivies.AllBookActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

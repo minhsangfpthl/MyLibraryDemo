@@ -1,4 +1,4 @@
-package com.example.demorecyclerview;
+package com.example.demorecyclerview.Object;
 
 public class Book {
     private int id;

@@ -1,8 +1,9 @@
-package com.example.demorecyclerview;
+package com.example.demorecyclerview.Adapters;
+
+import static com.example.demorecyclerview.Actitivies.BookActivity.BOOK_ID_KEY;
 
 import android.content.Context;
 import android.content.Intent;
-import android.transition.TransitionManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,13 +15,17 @@ import androidx.annotation.NonNull;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.demorecyclerview.Actitivies.BookActivity;
+import com.example.demorecyclerview.Object.Book;
+import com.example.demorecyclerview.R;
+
 import java.util.List;
 
 public class MyCustomAdapter extends RecyclerView.Adapter<MyCustomAdapter.MyViewHolder> {
     List<Book> books;
     Context mContext;
-    public MyCustomAdapter(List<Book> chapters) {
-        this.books = chapters;
+    public MyCustomAdapter(List<Book> book) {
+        this.books = book;
     }
 
     public MyCustomAdapter(Context mContext) {
@@ -40,11 +45,14 @@ public class MyCustomAdapter extends RecyclerView.Adapter<MyCustomAdapter.MyView
         //set cac thuoc tinh
         holder.imv.setBackgroundResource(books.get(position).getImageUrl());
         holder.tv_name.setText(books.get(position).getName());
-
+        int mLastPosition = holder.getAdapterPosition();
         holder.parent.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(v.getContext(), BookActivity.class);
+                intent.putExtra(BOOK_ID_KEY,books.get(mLastPosition).getId());
+
+
                 v.getContext().startActivity(intent);
             }
         });

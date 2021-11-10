@@ -1,10 +1,12 @@
-package com.example.demorecyclerview;
+package com.example.demorecyclerview.Actitivies;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.example.demorecyclerview.R;
 
 public class InforActivity extends AppCompatActivity {
 
