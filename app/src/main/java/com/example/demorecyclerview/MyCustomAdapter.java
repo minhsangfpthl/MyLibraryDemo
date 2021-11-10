@@ -11,15 +11,20 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
 public class MyCustomAdapter extends RecyclerView.Adapter<MyCustomAdapter.MyViewHolder> {
     List<Book> books;
-
+    Context mContext;
     public MyCustomAdapter(List<Book> chapters) {
         this.books = chapters;
+    }
+
+    public MyCustomAdapter(Context mContext) {
+        this.mContext = mContext;
     }
 
     @NonNull
@@ -36,6 +41,14 @@ public class MyCustomAdapter extends RecyclerView.Adapter<MyCustomAdapter.MyView
         holder.imv.setBackgroundResource(books.get(position).getImageUrl());
         holder.tv_name.setText(books.get(position).getName());
 
+        holder.parent.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(v.getContext(), BookActivity.class);
+                v.getContext().startActivity(intent);
+            }
+        });
+
         holder.txtAuthor.setText(books.get(position).getAuthor());
         holder.txtDescription.setText(books.get(position).getShortDesc());
 
@@ -48,6 +61,8 @@ public class MyCustomAdapter extends RecyclerView.Adapter<MyCustomAdapter.MyView
             holder.expandedReLayout.setVisibility(View.GONE);
             holder.downArrow.setVisibility(View.VISIBLE);
         }
+
+
     }
 
     @Override
@@ -63,6 +78,8 @@ public class MyCustomAdapter extends RecyclerView.Adapter<MyCustomAdapter.MyView
         private RelativeLayout expandedReLayout;
         private TextView txtAuthor , txtDescription;
 
+        private ConstraintLayout parent;
+
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
             imv = itemView.findViewById(R.id.imv_avatar);
@@ -74,6 +91,7 @@ public class MyCustomAdapter extends RecyclerView.Adapter<MyCustomAdapter.MyView
             txtAuthor = itemView.findViewById(R.id.authorText);
             txtDescription = itemView.findViewById(R.id.shortDes);
 
+            parent = itemView.findViewById(R.id.root);
 
             downArrow.setOnClickListener(new View.OnClickListener() {
                 @Override

@@ -1,7 +1,6 @@
 package com.example.demorecyclerview;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -12,6 +11,7 @@ import java.util.List;
 
 public class AllBookActivity extends AppCompatActivity {
     RecyclerView recyclerView;
+    AllBookActivity activity;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,5 +46,9 @@ public class AllBookActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         //recyclerView.setLayoutManager(new GridLayoutManager(this,2));
         recyclerView.setAdapter(adapter);
+
+    }
+    public void onAttach(AllBookActivity activity){
+        this.activity = activity;
     }
 }
