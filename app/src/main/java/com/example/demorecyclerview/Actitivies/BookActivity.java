@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.demorecyclerview.Object.Book;
 import com.example.demorecyclerview.R;
@@ -34,22 +35,22 @@ public class BookActivity extends AppCompatActivity {
         if (intent != null) {
             int bookId = intent.getIntExtra(BOOK_ID_KEY,-1);
             if (bookId != -1){
-                Book imcomingBook = Utils.getInstance().getBookByID(bookId);
-                if (imcomingBook != null) {
-                    setData(imcomingBook);
+                Book incomingBook = Utils.getInstance().getBookByID(bookId);
+                if (incomingBook != null) {
+                    setData(incomingBook);
 
-                    handleAlreadyRead(imcomingBook);
+                    handleAlreadyRead(incomingBook);
                 }
             }
         }
 
     }
 
-    private void handleAlreadyRead(Book imcomingBook) {
+    private void handleAlreadyRead(Book incomingBook) {
         ArrayList<Book> alreadyReadBooks = Utils.getInstance().getAlreadyReadBooks();
         boolean existInAlreadyReadBooks =false;
         for (Book b: alreadyReadBooks) {
-            if(b.getId() == imcomingBook.getId()){
+            if(b.getId() == incomingBook.getId()){
                 existInAlreadyReadBooks =true;
             }
             if (existInAlreadyReadBooks){
@@ -58,7 +59,13 @@ public class BookActivity extends AppCompatActivity {
                 btnAddAlready.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
+                        if(Utils.getInstance().addToAlreadyBook(incomingBook)){
+                            Toast.makeText(BookActivity.this,"Book Added",Toast.LENGTH_SHORT).show();
 
+                            // navigate the user
+                        }else{
+                            Toast.makeText(BookActivity.this,"Wrong, Try Again",Toast.LENGTH_SHORT).show();
+                        }
                     }
                 });
             }

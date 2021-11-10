@@ -29,7 +29,7 @@ public class AllBookActivity extends AppCompatActivity {
         recyclerView.setAdapter(adapter);
 
     }
-    public void onAttach(AllBookActivity activity){
-        this.activity = activity;
-    }
+    //public void onAttach(AllBookActivity activity){
+       // this.activity = activity;
+    //}
 }
