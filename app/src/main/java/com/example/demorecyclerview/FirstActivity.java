@@ -13,13 +13,13 @@ public class FirstActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_first);
-
+        // hien ra giao dien first
         btn_first = findViewById(R.id.btnAllBooks);
-
+        // bam vao all book thi chuyen sang activity all book and list ra book
         btn_first.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(FirstActivity.this,MainActivity.class);
+                Intent intent = new Intent(FirstActivity.this, AllBookActivity.class);
                 startActivity(intent);
             }
         });
