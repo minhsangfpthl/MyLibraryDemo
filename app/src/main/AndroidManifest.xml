@@ -8,34 +8,41 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Design.Light.NoActionBar">
+        android:theme="@style/Theme.AppCompat.Light.DarkActionBar">
         <activity
             android:name=".Actitivies.WebsiteActivity"
-            android:exported="true" />
+            android:exported="true"/>
         <activity
             android:name=".Actitivies.CurrentlyReadBookActivity"
-            android:exported="true" />
+            android:exported="true"
+            android:label="@string/activity_currently_reading"/>
         <activity
             android:name=".Actitivies.FavoriteBookActivity"
-            android:exported="true" />
+            android:exported="true"
+            android:label="@string/activity_favourite_books"/>
         <activity
             android:name=".Actitivies.WantToReadActivity"
-            android:exported="true" />
+            android:exported="true"
+            android:label="@string/activity_want_read"/>
         <activity
             android:name=".Actitivies.AlreadyReadBookActivity"
-            android:exported="true" />
+            android:exported="true"
+            android:label="@string/activity_already_books"/>
         <activity
             android:name=".Actitivies.BookActivity"
-            android:exported="true" />
+            android:exported="true"
+            android:label="@string/activity_books_detail"/>
         <activity
             android:name=".Actitivies.FirstActivity"
-            android:exported="true" />
+            android:exported="true"/>
         <activity
             android:name=".Actitivies.InforActivity"
-            android:exported="true" />
+            android:exported="true"/>
         <activity
             android:name=".Actitivies.AllBookActivity"
-            android:exported="true">
+            android:exported="true"
+            android:label="@string/activity_all_books">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
