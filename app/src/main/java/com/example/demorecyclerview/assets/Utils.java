@@ -35,17 +35,17 @@ public class Utils {
     }
     // set Data
     private void initData() {
-        allBooks.add(new Book(1,"Đắc Nhân Tâm", "Nguyễn Văn Phước",1999, R.drawable.ic_launcher_background
+        allBooks.add(new Book(1,"Đắc Nhân Tâm", "Nguyễn Văn Phước",1999, R.drawable.dacnhantam
                 ,"Những ai có thể đặt mình vào vị trí người khác","Những ai có thể đặt mình vào vị trí người khác,những ai có thể hiểu những suy tư, cảm nhận của mọi người thì không bao giờ phải lo lắng cho tương lai."));
-        allBooks.add(new Book(2,"Nhà giả kim", "Paulo Coelho",350,R.drawable.ic_launcher_background
+        allBooks.add(new Book(2,"Nhà giả kim", "Paulo Coelho",350,R.drawable.nhagiakim
                 ,"Cuốn sách bán chạy nhất chỉ sau kinh thánh","Nhân vật chính trong truyện là Santiago. Cha mẹ Santiago mong muốn cậu trở thành linh mục để mang lại niềm tự hào cho gia đình, nhưng vì ước mơ từ nhỏ của chính mình là đi đây đi đó khắp thế giới, Santigo đã thuyết phục được cha cậu và trở thành một người chăn cừu."));
-        allBooks.add(new Book(3,"Ở quán cà phê của tuổi trẻ lạc lối", "Partrick Modiano",289,R.drawable.ic_launcher_background
+        allBooks.add(new Book(3,"Ở quán cà phê của tuổi trẻ lạc lối", "Partrick Modiano",289,R.drawable.oquancaphe
                 ,"Liệu những con đường ta qua thời tuổi trẻ có thực sự là đường vòng?","Tuổi trẻ là một khối dồn nén. Nó có sức phá hoại đến nỗi, vào một thời điểm những tưởng đã quay lưng với cuộc đời, ta chợt nhìn lại và thấy vần vũ quanh mình những gương mặt, mối tình, những lần gặp gỡ, các cảm xúc chân thực và sống động như dao cứa"));
-        allBooks.add(new Book(4,"Cha và Con", "Tony Parsons",311,R.drawable.ic_launcher_background
+        allBooks.add(new Book(4,"Cha và Con", "Tony Parsons",311,R.drawable.chavacon
                 ,"CÂU CHUYỆN XÚC ĐỘNG VỀ SỰ TRƯỞNG THÀNH CỦA MỘT NGƯỜI ĐÀN ÔNG","Cha và Con là cuốn sách viết về những khó khăn và diễn biến tâm lý của nhân vật nam chính sau khi vợ bỏ đi để lại anh một mình với cậu con trai nhỏ."));
-        allBooks.add(new Book(5,"Tỷ Phú Bán Giày", "Tony Hsieh",469,R.drawable.ic_launcher_background
+        allBooks.add(new Book(5,"Tỷ Phú Bán Giày", "Tony Hsieh",469,R.drawable.typhubangiay
                 ,"xếp thứ 5 trong những cuốn sách hay về Marketing và Bán hàng","Với “Tỷ Phú Bán Giày”, bạn sẽ nhận được cảm hứng, hết lòng và cả một chút điên rồ cho những ý tưởng buôn bán mà nghe qua tưởng như vô cùng liều mạng. "));
-        allBooks.add(new Book(6,"Ông Già Và Biển Cả", "Hemingway",350,R.drawable.ic_launcher_background
+        allBooks.add(new Book(6,"Ông Già Và Biển Cả", "Hemingway",350,R.drawable.onggiavabienca
                 ," là truyện ngắn dạng viễn tưởng cuối cùng được viết bởi Hemingway. ","Đây là một tác phẩm lý tưởng, nó thật sự mang ý nghĩa rất lớn đặc biệt là đối với những ai đang muốn bỏ cuộc, đang muốn đầu hàng chính bản thân mình, bạn không thể biết được điều gì đang đợi bạn phía trước, hãy tin tưởng vào con đường bạn đã chọn, tin tưởng vào khả năng của chính mình."));
 
     }
@@ -90,5 +90,33 @@ public class Utils {
 
     public boolean addToAlreadyBook(Book book){
         return  alreadyReadBooks.add(book);
+    }
+
+    public boolean addToWantToReadBook(Book book){
+        return  wantToReadBooks.add(book);
+    }
+
+    public boolean addToFavoriteBook(Book book){
+        return  favoriteBooks.add(book);
+    }
+
+    public boolean addToCurrentlyBook(Book book){
+        return  currentlyReadingBooks.add(book);
+    }
+
+    public  boolean removeAlreadyRead(Book book){
+        return  alreadyReadBooks.remove(book);
+    }
+
+    public  boolean removeWantToRead(Book book){
+        return  wantToReadBooks.remove(book);
+    }
+
+    public  boolean removeFavoriteRead(Book book){
+        return  favoriteBooks.remove(book);
+    }
+
+    public  boolean removeCurrentlyRead(Book book){
+        return  currentlyReadingBooks.remove(book);
     }
 }
