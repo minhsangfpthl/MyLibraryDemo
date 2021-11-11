@@ -8,7 +8,7 @@ public class Book {
     private int imageUrl;
     private String shortDesc;
     private String longDesc;
-    private boolean isExpanded;
+    private boolean isExpanded; // hien thi them thong tin
 
 
     public Book(int id, String name, String author, int pages, int imageUrl, String shortDesc, String longDesc) {

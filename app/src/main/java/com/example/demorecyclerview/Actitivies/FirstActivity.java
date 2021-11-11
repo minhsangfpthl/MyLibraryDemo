@@ -29,6 +29,7 @@ public class FirstActivity extends AppCompatActivity {
 
         // hien ra giao dien first
         btn_first = findViewById(R.id.btnAllBooks);
+
         // bam vao all book thi chuyen sang activity all book and list ra book
         btn_first.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -6,7 +6,7 @@ import com.example.demorecyclerview.R;
 import java.util.ArrayList;
 
 public class Utils {
-    private static Utils instance;
+    private static Utils instance; // instance
 
 
     private static ArrayList<Book> allBooks;
@@ -36,9 +36,13 @@ public class Utils {
     // set Data
     private void initData() {
         allBooks.add(new Book(1,"Đắc Nhân Tâm", "Nguyễn Văn Phước",1999, R.drawable.dacnhantam2
-                ,"Những ai có thể đặt mình vào vị trí người khác","Những ai có thể đặt mình vào vị trí người khác,những ai có thể hiểu những suy tư, cảm nhận của mọi người thì không bao giờ phải lo lắng cho tương lai."));
+                ,"Những ai có thể đặt mình vào vị trí người khác","Những ai có thể đặt mình vào vị trí người khác,những ai có thể hiểu những suy tư, cảm nhận của mọi người thì không bao giờ phải lo lắng cho tương lai.Những ai có thể đặt mình vào vị trí người khác,những ai có thể hiểu những suy tư, cảm nhận của mọi người thì không bao giờ phải lo lắng cho tương lai."));
         allBooks.add(new Book(2,"Nhà giả kim", "Paulo Coelho",350,R.drawable.nhagiakim
-                ,"Cuốn sách bán chạy nhất chỉ sau kinh thánh","Nhân vật chính trong truyện là Santiago. Cha mẹ Santiago mong muốn cậu trở thành linh mục để mang lại niềm tự hào cho gia đình, nhưng vì ước mơ từ nhỏ của chính mình là đi đây đi đó khắp thế giới, Santigo đã thuyết phục được cha cậu và trở thành một người chăn cừu."));
+                ,"Cuốn sách bán chạy nhất chỉ sau kinh thánh","Nhân vật chính trong truyện là Santiago. Cha mẹ Santiago mong muốn cậu trở thành linh mục để mang lại niềm tự hào cho gia đình, " +
+                "nhưng vì ước mơ từ nhỏ của chính mình là đi đây đi đó khắp thế giới, Santigo đã thuyết phục được cha cậu và trở thành " +
+                "một người chăn cừu.Nhân vật chính trong truyện là Santiago. Cha mẹ Santiago mong muốn cậu trở thành linh mục để mang lại niềm tự hào cho gia đình, \" +\n" +
+                "                \"nhưng vì ước mơ từ nhỏ của chính mình là đi đây đi đó khắp thế giới, Santigo đã thuyết phục được cha cậu và trở thành \" +\n" +
+                "                \"một người chăn cừu"));
         allBooks.add(new Book(3,"Ở quán cà phê của tuổi trẻ lạc lối", "Partrick Modiano",289,R.drawable.oquancaphe
                 ,"Liệu những con đường ta qua thời tuổi trẻ có thực sự là đường vòng?","Tuổi trẻ là một khối dồn nén. Nó có sức phá hoại đến nỗi, vào một thời điểm những tưởng đã quay lưng với cuộc đời, ta chợt nhìn lại và thấy vần vũ quanh mình những gương mặt, mối tình, những lần gặp gỡ, các cảm xúc chân thực và sống động như dao cứa"));
         allBooks.add(new Book(4,"Cha và Con", "Tony Parsons",311,R.drawable.chavacon

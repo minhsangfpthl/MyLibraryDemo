@@ -77,12 +77,6 @@ public class MyCustomAdapter extends RecyclerView.Adapter<MyCustomAdapter.MyView
                 holder.btnDelete.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                     /*   if(Utils.getInstance().removeAlreadyRead(books.get(mLastPosition))){
-                            Toast.makeText(v.getContext(),"Removed",Toast.LENGTH_SHORT).show();
-                            notifyDataSetChanged();
-                        }else{
-                            Toast.makeText(v.getContext(),"Wrong, Try Again",Toast.LENGTH_SHORT).show();
-                        }*/
 
                         AlertDialog.Builder builer = new AlertDialog.Builder(v.getContext());
                         builer.setMessage("Are you sure want to delete" + books.get(mLastPosition).getName()+ "?");
@@ -186,7 +180,6 @@ public class MyCustomAdapter extends RecyclerView.Adapter<MyCustomAdapter.MyView
 
                             }
                         });
-
                         builer.create().show();
                     }
                 });
