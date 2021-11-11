@@ -35,7 +35,7 @@ public class Utils {
     }
     // set Data
     private void initData() {
-        allBooks.add(new Book(1,"Đắc Nhân Tâm", "Nguyễn Văn Phước",1999, R.drawable.dacnhantam
+        allBooks.add(new Book(1,"Đắc Nhân Tâm", "Nguyễn Văn Phước",1999, R.drawable.dacnhantam2
                 ,"Những ai có thể đặt mình vào vị trí người khác","Những ai có thể đặt mình vào vị trí người khác,những ai có thể hiểu những suy tư, cảm nhận của mọi người thì không bao giờ phải lo lắng cho tương lai."));
         allBooks.add(new Book(2,"Nhà giả kim", "Paulo Coelho",350,R.drawable.nhagiakim
                 ,"Cuốn sách bán chạy nhất chỉ sau kinh thánh","Nhân vật chính trong truyện là Santiago. Cha mẹ Santiago mong muốn cậu trở thành linh mục để mang lại niềm tự hào cho gia đình, nhưng vì ước mơ từ nhỏ của chính mình là đi đây đi đó khắp thế giới, Santigo đã thuyết phục được cha cậu và trở thành một người chăn cừu."));
